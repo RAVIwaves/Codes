@@ -3,13 +3,15 @@
 #include <bits/stdc++.h>
 using namespace std ;
 
+typedef long long ll ;
+
 /*Function for calculating cobination. this function takes 
   total no. of objects and no. of objects we want to choose.
 */
-long long nCr(long long n,long long r)
+ll nCr(ll n,ll r)
 {
-    long long ans = 1 ;
-    for(long long i=0 ; i<min(r,n-r) ; i++)
+    ll ans = 1 ;
+    for(ll i=0 ; i<min(r,n-r) ; i++)
     {
         ans *= n-i ;
         ans /= i+1 ;
@@ -19,7 +21,8 @@ long long nCr(long long n,long long r)
 
 int main()
 {
-    long long n , r ;
+    //test for function
+    ll n , r ;
     cout << "Enter number of total objects : " ;
     cin >> n ;
     cout << "Enter how many objects we have to choose : " ;
